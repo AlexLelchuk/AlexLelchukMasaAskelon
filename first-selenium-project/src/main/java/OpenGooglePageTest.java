@@ -5,17 +5,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class OpenGooglePageTest {
-GhromeDriver driver;
+ChromeDriver driver;
 
 @BeforeMethod
     public void setUp(){
-    driver = new GhromeDriver();
+    driver = new ChromeDriver();
 }
 
 @Test
     public void testOpeningGooglePage(){
 //driver.get("https://www.google.com/");
-driver.navigate().to(url:"https://www.google.com/");
+driver.navigate().to("https://www.google.com/");
 
 driver.findElement(By.name("q")).sendKeys("Webdriver");
 }
